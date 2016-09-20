@@ -19,7 +19,11 @@ public class DictsCache {
 
 	private static Map<String, String> ScoreEvents = new HashMap<String, String>();
 
-	static {
+/*	static {
+		getScoreMap();// 加载积分时间字典
+	}*/
+	
+	public static void initDicts(){
 		getScoreMap();// 加载积分时间字典
 	}
 
