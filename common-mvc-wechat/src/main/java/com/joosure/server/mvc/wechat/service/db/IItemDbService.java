@@ -2,6 +2,8 @@ package com.joosure.server.mvc.wechat.service.db;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.joosure.server.mvc.wechat.entity.pojo.Exchange;
 import com.joosure.server.mvc.wechat.entity.pojo.Item;
 import com.joosure.server.mvc.wechat.entity.pojo.ItemComment;
@@ -29,6 +31,9 @@ public interface IItemDbService {
 	List<Item> getItemsByOwnerIdPages(int ownerId, int startRow, int limitSize);
 
 	List<Item> getItemsRecommended();
+	
+	List<Item> getItemsByUnionIdPages(@Param("unionId")String unionId,@Param("startRow") int startRow,
+			@Param("limitSize") int limitSize);
 
 	/**
 	 * 市集宝贝列表分页查询
@@ -94,4 +99,10 @@ public interface IItemDbService {
 	ItemLike getItemLike(int itemId, int userId);
 
 	void saveItemReport(WxUserCpt wxUserCpt);
+	
+	List<Exchange> getExchangesByUnionIdPages(String unionId,int startRow, int limitSize);
+	List<Exchange> getExchangesByUnionIdInChangerSidePages(String unionId, int startRow,
+			int limitSize);
+	List<Exchange> getExchangesByUnionIdInOwnerSidePages(String unionId, int startRow,
+			int limitSize);
 }

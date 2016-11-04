@@ -10,7 +10,7 @@ public class Dict {
 	private String paramDesc;
 	private String paramvalue;
 	private Date addTime;
-	private int status;
+	private Integer status;
 	private Date updateTime;
 	private String memo;
 
@@ -46,11 +46,11 @@ public class Dict {
 		this.paramDesc = paramDesc;
 	}
 
-	public int getStatus() {
+	public Integer getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) {
+	public void setStatus(Integer status) {
 		this.status = status;
 	}
 

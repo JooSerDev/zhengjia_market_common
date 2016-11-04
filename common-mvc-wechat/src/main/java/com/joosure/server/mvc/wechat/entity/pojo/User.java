@@ -19,6 +19,9 @@ public class User {
 	private Integer exchangeNum;
 	private Integer finishNum;// 正佳认证交易完成数量
 	private Integer score;
+	
+	private String sysId;
+	private String unionId;
 
 	public Integer getUserId() {
 		return userId;
@@ -130,6 +133,22 @@ public class User {
 
 	public void setScore(Integer score) {
 		this.score = score;
+	}
+
+	public String getSysId() {
+		return sysId;
+	}
+
+	public void setSysId(String sysId) {
+		this.sysId = sysId;
+	}
+
+	public String getUnionId() {
+		return unionId;
+	}
+
+	public void setUnionId(String unionId) {
+		this.unionId = unionId;
 	}
 
 }
