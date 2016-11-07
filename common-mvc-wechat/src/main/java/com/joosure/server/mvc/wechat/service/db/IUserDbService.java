@@ -41,4 +41,6 @@ public interface IUserDbService {
 	 * 微信用户信息相关 结束--------------------------------------------------------------
 	 */
 
+	List<User> getUnionUsersWithoutState(String unionId);
+
 }
