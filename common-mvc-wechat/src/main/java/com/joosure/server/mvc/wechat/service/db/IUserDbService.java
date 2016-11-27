@@ -43,4 +43,13 @@ public interface IUserDbService {
 
 	List<User> getUnionUsersWithoutState(String unionId);
 
+	/**
+	 * 根据unionid获取它相关的用户id
+	 * @author Ted-wuhuhu
+	 * @Time 2016年11月25日 下午5:25:11
+	 * @param ui
+	 * @return
+	 */
+	List<Integer> getUserIdsFromUnionId(String ui);
+
 }
